@@ -1,0 +1,125 @@
+/*----------------------------------------------
+------------------------------------------------
+1. Global Styles
+------------------------------------------------
+----------------------------------------------*/
+
+
+/* SYNTAX REQUIRED TO IMPORT LOCAL FONTS - EXAMPLE BELOW */
+	/*
+		@font-face {
+			font-family: Arial;
+			src: url('../fonts/Arial/Horizon.otf');
+		} 
+*/
+
+
+/* Import Fonts from Adobe */
+@import url("https://use.typekit.net/pqk1tgc.css");
+
+/* Nickel Gothic Variable Font and the properties it requires in order to be set correctly */
+	/*
+		font-family: "nickel-gothic-variable", sans-serif;
+		font-variation-settings: "slnt" 0, "wdth" 100;
+	*/
+
+/* Banhschrift Font and the properties each variation requires in order to be set correctly */
+	/*
+	Bahnschrift Light
+		font-family: "bahnschrift", sans-serif;
+		font-weight: 200;
+		font-style: normal;
+	Bahnschrift SemiLight
+		font-family: "bahnschrift", sans-serif;
+		font-weight: 300;
+		font-style: normal;
+	Bahnschrift Regular
+		font-family: "bahnschrift", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+	Bahnschrift SemiBold
+		font-family: "bahnschrift", sans-serif;
+		font-weight: 600;
+		font-style: normal;
+	Bahnschrift Bold
+		font-family: "bahnschrift", sans-serif;
+		font-weight: 700;
+		font-style: normal;
+	Bahnschrift Light Condensed
+		font-family: "bahnschrift-condensed", sans-serif;
+		font-weight: 200;
+		font-style: normal;
+	Bahnschrift SemiLight Condensed
+		font-family: "bahnschrift-condensed", sans-serif;
+		font-weight: 300;
+		font-style: normal;
+	Bahnschrift Condensed
+		font-family: "bahnschrift-condensed", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+	Bahnschrift SemiBold Condensed
+		font-family: "bahnschrift-condensed", sans-serif;
+		font-weight: 600;
+		font-style: normal;
+	Bahnschrift Bold Condensed
+		font-family: "bahnschrift-condensed", sans-serif;
+		font-weight: 700;
+		font-style: normal;
+	Bahnschrift Light SemiCondensed
+		font-family: "bahnschrift-semicondensed", sans-serif;
+		font-weight: 200;
+		font-style: normal;
+	Bahnschrift SemiLight SemiCondensed
+		font-family: "bahnschrift-semicondensed", sans-serif;
+		font-weight: 300;
+		font-style: normal;
+	Bahnschrift SemiCondensed
+		font-family: "bahnschrift-semicondensed", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+	Bahnschrift SemiBold SemiCondensed
+		font-family: "bahnschrift-semicondensed", sans-serif;
+		font-weight: 600;
+		font-style: normal;
+	Bahnschrift Bold SemiCondensed
+		font-family: "bahnschrift-semicondensed", sans-serif;
+		font-weight: 700;
+		font-style: normal;
+	*/
+
+
+/* Root Variables */
+:root {
+	--base-font-size: 20px;
+	--my-green: #a8cc7a;
+	--my-black: #111111;
+}
+
+html {
+	font-size: var(--base-font-size);
+}
+
+body {
+	background-color: var(--my-black);
+	color: white;
+}
+
+p {
+		font-family: "bahnschrift", sans-serif;
+		font-weight: 200;
+		font-style: normal;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "bahnschrift", sans-serif;
+}

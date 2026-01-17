@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  background-color: #111111; /* black fade effect while loading */
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+#page-content {
+  opacity: 0;
+  transition: opacity 2s ease; /* smooth fade */
+}
+
+#page-content.visible {
+  opacity: 1;
+}

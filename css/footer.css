@@ -1,0 +1,142 @@
+/*----------------------------------------------
+------------------------------------------------
+1. footer
+------------------------------------------------
+----------------------------------------------*/
+
+/* Define transition duration for
+footer links hover effect (includes font size and color change) 
+mobile hamburger menu (smoothly appears from the right) */
+:root {
+    --transition-duration: 1.05s;
+}
+
+.footer {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #111111;
+    z-index: 80;
+    align-items: center;
+    padding-left: 70px;
+    padding-right: 124px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 0.5px;
+    background-color: #a8cc7a;;
+}
+.footer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 0px;
+    background-color: #a8cc7a;;
+}
+
+.footer__content-left{
+    padding-left: 74px;
+}
+
+.footer__heading{
+    /* 	Bahnschrift Bold */
+    font-family: "bahnschrift", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+}
+.footer__email{
+    /* Bahnschrift SemiLight */
+    font-family: "bahnschrift", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    color: var(--my-green);
+    transition: 0.5s ease-in;
+}
+.footer__email a{
+    color: var(--my-green);
+    text-decoration: none;
+}
+.footer__copyright{
+    /* Bahnschrift Regular */
+    font-family: "bahnschrift", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+    padding-right: 70px;
+}
+
+@media only screen and (max-width: 2100px) {
+    .footer {
+        padding-left: 40px;
+        padding-right: 70px;
+    }
+    .footer__content-left{
+        padding-left: 36px;
+    }
+    .footer__copyright{
+        padding-right: 52px;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .footer::before {
+        height: 0.25px;
+    }
+    .footer::after {
+        height: 0px;
+    }
+    .footer {
+        flex-direction: column;
+        row-gap: 16px;
+        padding-top: 16px;
+        padding-bottom: 24px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .footer__copyright{
+        padding-right: 0;
+    }
+    .footer__content-left{
+        padding-left: 0;
+    }
+    .footer__heading{
+        /* 	Bahnschrift Bold */
+        font-family: "bahnschrift", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 26px;
+    }
+    .footer__email{
+        /* Bahnschrift SemiLight */
+        font-family: "bahnschrift", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 18px;
+        color: var(--my-green);
+        transition: 0.5s ease-in;
+    }
+    .footer__copyright{
+        /* Bahnschrift Regular */   
+        font-size: 14px;
+    }
+}
+
+.footer__email:hover {
+        font-size: 20.5px;
+}

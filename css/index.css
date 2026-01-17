@@ -1,0 +1,253 @@
+/************************************************
+*************************************************
+2. Component Styles -----------------
+3. Media Queries --------------------
+*************************************************
+************************************************/
+
+/*----------------------------------------------
+------------------------------------------------
+2. Component Styles
+------------------------------------------------
+----------------------------------------------*/
+
+/*----------------------------------------------
+------------------------------------------------
+3. Media Queries
+------------------------------------------------
+----------------------------------------------*/
+@import url("https://use.typekit.net/pqk1tgc.css");
+/* ≥568px ---- Phones in landscape mode, smaller tablets) */
+@media screen and (min-width: 35.5em) {
+}
+
+/* ≥768px ---- Larger tablets and smaller desktop screens */
+@media screen and (min-width: 48rem) {
+}
+
+/* ≥1024px --- Standard desktop and laptop screens */
+@media screen and (min-width: 64rem) {
+}
+
+/* 	≥1280px --- Larger desktop screens and some high-resolution laptops */
+@media screen and (min-width: 80rem) {
+}
+
+/* ≥1536px --- Larger desktop screens and high-resolution monitors */
+@media screen and (min-width: 96rem) {
+}
+
+/* ≥1920px --- Larger desktop screens and high-resolution monitors */
+@media screen and (min-width: 120rem) {
+}
+
+/* Make text non-selectable */
+.text-noselect {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+
+/*  */
+/* Hero Section Styling */
+.hero-section {
+  text-align: center;
+  padding: 0px 20px;
+  margin-top: 180px;
+  margin-bottom: 90px;
+  background-color: #0f0f0f;
+}
+
+.hero-section__image {
+  width: 960px;
+  max-width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+.hero-section__heading {
+  font-family: "nickel-gothic-variable", sans-serif;
+	font-variation-settings: "slnt" 0, "wdth" 100;
+  font-size: 190px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  line-height: 1;
+}
+
+.hero-section__subheading {
+  font-family: "nickel-gothic-variable", sans-serif;
+	font-variation-settings: "slnt" 0, "wdth" 100;
+  font-size: 62px;
+  font-style: oblique;
+  color: #a8cc7a;
+  margin: 20px 0;
+  font-weight: normal;
+}
+
+.hero-section__body {
+  font-family: 'Bahnschrift Light', sans-serif;
+  font-size: 24px;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Portfolio Grid/Cards Styling */
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+  background-color: #0f0f0f;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.portfolio-card {
+  position: relative;
+  width: 500px;
+  height: 280px;
+  aspect-ratio: 500 / 280;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.01);
+}
+
+@media (max-width: 1100px) {
+  .portfolio-card {
+    flex-shrink: 1;
+    width: calc(50% - 20px);
+    max-width: 500px;
+    height: auto;
+  }
+}
+
+@media (max-width: 540px) {
+  .portfolio-card {
+    width: calc(100% - 0px);
+    max-width: 100%;
+  }
+}
+
+.portfolio-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
+
+.portfolio-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #a8cc7a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-card__overlay {
+  opacity: 1;
+}
+
+.portfolio-card__text {
+		/* font-family: "bahnschrift-condensed", sans-serif;
+		font-weight: 600;
+		font-style: normal; */
+    		font-family: "bahnschrift-semicondensed", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+  font-size: 30px;
+  color: #000000;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .hero-section__heading {
+    font-size: 120px;
+  }
+
+  .hero-section__subheading {
+    font-size: 42px;
+  }
+
+  .hero-section__body {
+    font-size: 22px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+
+  .portfolio-card {
+    max-width: 100%;
+  }
+
+  .hero-section__heading {
+    font-size: 80px;
+  }
+
+  .hero-section__subheading {
+    font-size: 32px;
+  }
+
+  .hero-section__body {
+    font-size: 16px;
+    max-width: 90%;
+  }
+
+  .portfolio-card__text {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        text-align: center;
+        padding: 0px 20px;
+        margin-top: 120px;
+        margin-bottom: 60px;
+        background-color: #0f0f0f;
+    }
+}
+
+@media(max-width:540px){
+  .hero-section {
+    text-align: center;
+    padding: 0px 20px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    background-color: #0f0f0f;
+  }
+}
