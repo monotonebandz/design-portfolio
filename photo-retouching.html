@@ -91,62 +91,42 @@
     <main class="project-page">
       <!-- Project Overview Section -->
       <section class="project-hero">
-        <h1 class="project-title">Hip-Hop Posters</h1>
+        <h1 class="project-title">Photo Retouching</h1>
                            <p class="project-overview">
-          This passion project explores music and visual design through a series of hip-hop artist posters. Each piece reflects the artist’s era and identity while developing my skills in composition, typography, color, and visual storytelling.</p>
-      </section>
-
+In this project, I learned key photo retouching skills: complex manual hair cutouts and strand-level detailing (beyond what AI can do), color grading, simple photo composition, professional skin retouching following tutorials, and detailed manual background cleanup.
+</p></section>
       <!-- Flex Gallery Section -->
       <section class="gallery">
         <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/hip-hop-posters/monotonebandz-hip-hop-poster-01-kendrick-lamar.jpg" alt="Kendrick Lamar Hip-Hop Poster">
-          <figcaption>Kendrick Lamar</figcaption>
+          <img src="images/photo-retouching/manual-advanced-skin-retouching.jpg" alt="Skin Retouching">
+          <figcaption>Skin Retouching</figcaption>
+          <span class="caption-description">blemish removal, frequency separation, skin tone evening, lip reshaping, color enhancement</span>
         </div>
         <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/hip-hop-posters/monotonebandz-hip-hop-poster-02-kanye-west.jpg" alt="Kanye West Hip-Hop Poster">
-          <figcaption>Kanye West</figcaption>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/hip-hop-posters/monotonebandz-hip-hop-poster-03-future.jpg" alt="Future Hip-Hop Poster">
-          <figcaption>Future</figcaption>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/hip-hop-posters/monotonebandz-hip-hop-poster-04-glorilla.jpg" alt="Glorilla Hip-Hop Poster">
-          <figcaption>Glorilla</figcaption>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/hip-hop-posters/monotonebandz-hip-hop-poster-05-sexyy-red.jpg" alt="Sexyy Red Hip-Hop Poster">
-          <figcaption>Sexyy Red</figcaption>
+          <img src="images/photo-retouching/photo-retouching-and-color-grading.jpg" alt="Color Grading & Retouching">
+          <figcaption>Color Grading & Retouching</figcaption>
+          <span class="caption-description">hair, eyes, lips, sweater, sneakers, background</span>
         </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/hip-hop-posters/monotonebandz-hip-hop-poster-06-ice-spice.jpg" alt="Ice Spice Hip-Hop Poster">
-          <figcaption>Ice Spice</figcaption>
+          <img src="images/photo-retouching/manual-complex-background-cleanup.jpg" alt="Background Cleanup">
+          <figcaption>Background Cleanup</figcaption>
+          <span class="caption-description">cleaning up a complex background</span>
         </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/hip-hop-posters/monotonebandz-hip-hop-poster-07-playboi-carti.jpg" alt="Playboi Carti Hip-Hop Poster">
-          <figcaption>Playboi Carti</figcaption>
+                <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/photo-retouching/manual-complex-hair-cutout.jpg" alt="Hair Cutout">
+          <figcaption>Hair Cutout</figcaption>
+          <span class="caption-description">manual hair mask and drawing of strands</span>
         </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/hip-hop-posters/monotonebandz-hip-hop-poster-08-lil-uzi-vert.jpg" alt="Lil Uzi Vert Hip-Hop Poster">
-          <figcaption>Lil Uzi Vert</figcaption>
+                        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/photo-retouching/batch-photo-color-grading.jpg" alt="Photoshoot Color Grading">
+          <figcaption>Photoshoot Color Grading</figcaption>
+          <span class="caption-description">consistent look across an entire set of photos</span>
         </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/hip-hop-posters/monotonebandz-hip-hop-poster-09-yeat.jpg" alt="Yeat Hip-Hop Poster">
-          <figcaption>Yeat</figcaption>
+                <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/photo-retouching/photo-composition-1.jpg" alt="Photo Compositing">
+          <figcaption>Photo Compositing</figcaption>
+          <span class="caption-description">combining 3 separate photos into 1</span>
         </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/hip-hop-posters/monotonebandz-hip-hop-poster-10-nicki-minaj.jpg" alt="Nicki Minaj Hip-Hop Poster">
-          <figcaption>Nicki Minaj</figcaption>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/hip-hop-posters/monotonebandz-hip-hop-poster-11-bia.jpg" alt="BIA Hip-Hop Poster">
-          <figcaption>BIA</figcaption>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/hip-hop-posters/monotonebandz-hip-hop-poster-12-coi-leray.jpg" alt="Coi Leray Hip-Hop Poster">
-          <figcaption>Coi Leray</figcaption>
-        </div>
-
       </section>
     </main>
 
@@ -159,6 +139,13 @@
         <p id="lightbox-caption" class="lightbox-caption"></p>
       </div>
       <button class="lightbox-next" onclick="nextImage()">›</button>
+    </div>
+
+    <!-- Brief Modal -->
+    <div id="brief-modal" class="brief-modal" onclick="closeBrief(event)">
+      <button class="brief-close" onclick="closeBrief()">×</button>
+      <div class="brief-content" id="brief-content">
+      </div>
     </div>
 
     <footer class="footer" style="margin-top:100px">
@@ -248,6 +235,92 @@
           prevImage();
         } else if (e.key === 'Escape') {
           closeLightbox();
+        }
+      });
+
+      // Brief modal functionality
+      const briefData = {
+        slantcho: {
+          title: 'Slantcho — A5 Double-Sided Flyer',
+          html: `
+            <h2>Slantcho — A5 Double-Sided Flyer</h2>
+            
+            <h3>Project Overview</h3>
+            <p>Design an A5 two-sided flyer for "slantcho", a Bulgarian brand specializing in baby foods. The flyer needs to be friendly and appealing to mothers of young children.</p>
+            
+            <h3>Target Audience</h3>
+            <p>It is intended to be distributed in places like pediatric waiting rooms and family clinics, where it should capture attention, build trust, and encourage parents to explore the brand's products.</p>
+            
+            <h3>Requirements</h3>
+            <ul>
+              <li>Include the company logo and contact information (from the official website)</li>
+              <li>Feature eight products in total — four per side, each with an image and a short description (from the official website)</li>
+              <li>Maintain an inviting and positive visual tone that resonates with parents</li>
+            </ul>
+          `
+        },
+        zora: {
+          title: 'ZORA — Autumn Campaign',
+          html: `
+            <h2>ZORA — Autumn Campaign Brief</h2>
+            
+            <h3>Project Overview</h3>
+            <p>Design a set of digital visuals for ZORA's autumn marketing campaign, highlighting the convenience and ease of purchasing electronics with a focus on the offer: 0% interest; 20 equal monthly installments; for all devices over 300 BGN. The visuals should be modern, fresh, and seasonally appropriate, encouraging users to click and engage.</p>
+            
+            <h3>Target Audience</h3>
+            <p>Consumers who are motivated by flexible payment options and seasonal promotions. Visuals will be used across Google Ads, Facebook Ads, Instagram Stories, and the homepage slider.</p>
+            
+            <h3>Requirements</h3>
+            <ul>
+              <li>Include the ZORA logo, positioned on the right side of the visual.</li>
+              <li>Come up with a clear, bold advertising message/slogan.</li>
+              <li>Include offer details: "0% interest on 20 installments for all devices over 300 BGN."</li>
+              <li>Include legal text in small font: "The offer is valid from XX.XX.2025 to XX.XX.2025 for products over 300 BGN, excluding other ongoing offers. Images are illustrative."</li>
+            </ul>
+            
+            <h3>Formats</h3>
+            <ul>
+              <li>Google Ads: 1200 x 628 px</li>
+              <li>Facebook Ads: 1080 x 1080 px</li>
+              <li>Instagram Story: 1080 x 1920 px</li>
+              <li>Homepage slider: 1530 x 466 px + CTA button (without logo)</li>
+            </ul>
+            
+            <h3>Creative Direction</h3>
+            <ul>
+              <li>Emphasize "0%" and "20 installments".</li>
+              <li>Ensure the design is attractive, memorable, and encourages clicks.</li>
+              <li>Style should be modern, fresh, and autumn-inspired.</li>
+              <li>Align with ZORA's visual identity (Brand Guidelines).</li>
+              <li>Use corporate colors flexibly, not mandatory.</li>
+            </ul>
+          `
+        }
+      };
+
+      function openBrief(event, projectId) {
+        event.stopPropagation();
+        const briefModal = document.getElementById('brief-modal');
+        const briefContent = document.getElementById('brief-content');
+        
+        if (briefData[projectId]) {
+          briefContent.innerHTML = briefData[projectId].html;
+          briefModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeBrief(event) {
+        if (event && event.target.id !== 'brief-modal') return;
+        const briefModal = document.getElementById('brief-modal');
+        briefModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Close brief on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeBrief();
         }
       });
 
