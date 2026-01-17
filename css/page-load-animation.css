@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #111111; /* black fade effect while loading */
+  background-color: #111111;  /* black fade effect while loading */
   overflow-x: hidden;
   font-family: sans-serif;
 }
