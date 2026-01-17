@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Nicolas | Graphic Designer</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon1.ico" />
+    <link rel="stylesheet" href="css/page-load-animation.css" />
+    <link rel="stylesheet" href="css/css-reset.css" />
+    <link rel="stylesheet" href="css/global-styles.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/hip-hop-posters.css" />
+
+    <!-- OPEN GRAPH TAGS -->
+    <!-- HTML Meta Tags -->
+<!-- OPEN GRAPH TAGS -->
+<!-- HTML Meta Tags -->
+<meta
+  name="description"
+  content="Graphic design portfolio of Nicolas (@monotonebandz) – freelance graphic designer in Veliko Tarnovo, Bulgaria, specializing in digital art, branding, and visual storytelling."
+/>
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://www.monotonebandz.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Nicolas | Graphic Designer" />
+<meta
+  property="og:description"
+  content="Graphic design portfolio of Nicolas (@monotonebandz) – freelance graphic designer in Veliko Tarnovo, Bulgaria, specializing in digital art, branding, and visual storytelling."
+/>
+<meta
+  property="og:image"
+  content="https://www.monotonebandz.com/images/open-graph/og-v2.jpg"
+/>
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="monotonebandz.com" />
+<meta property="twitter:url" content="https://www.monotonebandz.com/" />
+<meta name="twitter:title" content="Nicolas | Graphic Designer" />
+<meta
+  name="twitter:description"
+  content="Graphic design portfolio of Nicolas (@monotonebandz) – freelance graphic designer in Veliko Tarnovo, Bulgaria, specializing in digital art, branding, and visual storytelling."
+/>
+<meta
+  name="twitter:image"
+  content="https://www.monotonebandz.com/images/open-graph/og-v2.jpg"
+/>
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+  </head>
+
+  <body>
+        <div class="page-load-wrapper" id="page-content">
+    <nav class="navbar">
+      <div class="navbar__logo"  class=""><a href="index.html"><img src="images/nav-logo.png"></a></div>
+      <button id="navbar__hamburger" class="navbar__hamburger">
+        <img
+          class="navbar__hamburger-svg"
+          src="svgs/navbar/nav-hamburger.svg"
+        />
+      </button>
+      <ul id="navbar__links" class="navbar__links">
+        <a id="navbar__hamburger-close" class="navbar__hamburger-close" href="#">
+          <img class="navbar__hamburger-svg" src="svgs/navbar/nav-hamburger-close.svg"/>
+        </a>
+        <li>
+          <a class="navbar__link-web-projects" href="index.html"
+            >WORK</a
+          >
+        </li>
+        <li>
+          <a class="navbar__link-know-me" href="about.html"
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a class="navbar__link-contact-me" href="contact.html"
+            >CONTACT</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <main class="project-page">
+      <!-- Project Overview Section -->
+      <section class="project-hero">
+        <h1 class="project-title">Advertising Design</h1>
+                           <p class="project-overview">
+This project showcases advertising designs created for client-focused briefs. Each piece demonstrates my ability to interpret brand direction, work within real constraints, and produce production-ready solutions.</section>
+
+      <!-- Flex Gallery Section -->
+      <section class="gallery">
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/advertising-design/slantcho.jpg" alt="Slantcho Flyer Design">
+          <figcaption>Slantcho — A5 Double-Sided Flyer</figcaption>
+          <button class="brief-btn" onclick="openBrief(event, 'slantcho')">Brief</button>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/advertising-design/zora.jpg" alt="Zora Autumn Ad Campaign">
+          <figcaption>ZORA — Autumn Campaign</figcaption>
+          <button class="brief-btn" onclick="openBrief(event, 'zora')">Brief</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+      <button class="lightbox-close" onclick="closeLightbox()">×</button>
+      <button class="lightbox-prev" onclick="prevImage()">‹</button>
+      <div class="lightbox-content">
+        <img id="lightbox-image" src="" alt="">
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+      </div>
+      <button class="lightbox-next" onclick="nextImage()">›</button>
+    </div>
+
+    <!-- Brief Modal -->
+    <div id="brief-modal" class="brief-modal" onclick="closeBrief(event)">
+      <button class="brief-close" onclick="closeBrief()">×</button>
+      <div class="brief-content" id="brief-content">
+      </div>
+    </div>
+
+    <footer class="footer" style="margin-top:100px">
+      <div class="footer__content-left">
+        <h2 class="footer__heading text-noselect">Let's Work Together</h2>
+        <a href="mailto:monotonebandz@gmail.com" class="footer__email">monotonebandz@gmail.com</a>
+      </div>
+      <div class="footer__content-right">
+        <p class="footer__copyright text-noselect">© 2026 monotonebandz v1.0</p>
+      </div>
+    </footer>
+
+</div>
+    <script src="js/navbar.js"></script>
+    <!-- Lightbox Script -->
+    <script>
+      let currentImageIndex = -1;
+      const galleryItems = [];
+
+      function initGallery() {
+        const items = document.querySelectorAll('.gallery-item');
+        items.forEach((item) => {
+          galleryItems.push(item);
+        });
+      }
+
+      function openLightbox(element) {
+        currentImageIndex = galleryItems.indexOf(element);
+        displayLightboxImage(currentImageIndex);
+      }
+
+      function displayLightboxImage(index) {
+        if (index < 0 || index >= galleryItems.length) return;
+        
+        const element = galleryItems[index];
+        const img = element.querySelector('img');
+        const caption = element.querySelector('figcaption');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt;
+        lightboxCaption.textContent = caption.textContent;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function nextImage() {
+        if (currentImageIndex < galleryItems.length - 1) {
+          currentImageIndex++;
+          displayLightboxImage(currentImageIndex);
+        }
+      }
+
+      function prevImage() {
+        if (currentImageIndex > 0) {
+          currentImageIndex--;
+          displayLightboxImage(currentImageIndex);
+        }
+      }
+      
+      function closeLightbox(event) {
+        if (event && event.target.id !== 'lightbox') return;
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        currentImageIndex = -1;
+      }
+      
+      // Handle arrow key navigation
+      document.addEventListener('keydown', (e) => {
+        const lightbox = document.getElementById('lightbox');
+        if (!lightbox.classList.contains('active')) return;
+        
+        if (e.key === 'ArrowRight') {
+          nextImage();
+        } else if (e.key === 'ArrowLeft') {
+          prevImage();
+        } else if (e.key === 'Escape') {
+          closeLightbox();
+        }
+      });
+
+      // Brief modal functionality
+      const briefData = {
+        slantcho: {
+          title: 'Slantcho — A5 Double-Sided Flyer',
+          html: `
+            <h2>Slantcho — A5 Double-Sided Flyer</h2>
+            
+            <h3>Project Overview</h3>
+            <p>Design an A5 two-sided flyer for "slantcho", a Bulgarian brand specializing in baby foods. The flyer needs to be friendly and appealing to mothers of young children.</p>
+            
+            <h3>Target Audience</h3>
+            <p>It is intended to be distributed in places like pediatric waiting rooms and family clinics, where it should capture attention, build trust, and encourage parents to explore the brand's products.</p>
+            
+            <h3>Requirements</h3>
+            <ul>
+              <li>Include the company logo and contact information (from the official website)</li>
+              <li>Feature eight products in total — four per side, each with an image and a short description (from the official website)</li>
+              <li>Maintain an inviting and positive visual tone that resonates with parents</li>
+            </ul>
+          `
+        },
+        zora: {
+          title: 'ZORA — Autumn Campaign',
+          html: `
+            <h2>ZORA — Autumn Campaign Brief</h2>
+            
+            <h3>Project Overview</h3>
+            <p>Design a set of digital visuals for ZORA's autumn marketing campaign, highlighting the convenience and ease of purchasing electronics with a focus on the offer: 0% interest; 20 equal monthly installments; for all devices over 300 BGN. The visuals should be modern, fresh, and seasonally appropriate, encouraging users to click and engage.</p>
+            
+            <h3>Target Audience</h3>
+            <p>Consumers who are motivated by flexible payment options and seasonal promotions. Visuals will be used across Google Ads, Facebook Ads, Instagram Stories, and the homepage slider.</p>
+            
+            <h3>Requirements</h3>
+            <ul>
+              <li>Include the ZORA logo, positioned on the right side of the visual.</li>
+              <li>Come up with a clear, bold advertising message/slogan.</li>
+              <li>Include offer details: "0% interest on 20 installments for all devices over 300 BGN."</li>
+              <li>Include legal text in small font: "The offer is valid from XX.XX.2025 to XX.XX.2025 for products over 300 BGN, excluding other ongoing offers. Images are illustrative."</li>
+            </ul>
+            
+            <h3>Formats</h3>
+            <ul>
+              <li>Google Ads: 1200 x 628 px</li>
+              <li>Facebook Ads: 1080 x 1080 px</li>
+              <li>Instagram Story: 1080 x 1920 px</li>
+              <li>Homepage slider: 1530 x 466 px + CTA button (without logo)</li>
+            </ul>
+            
+            <h3>Creative Direction</h3>
+            <ul>
+              <li>Emphasize "0%" and "20 installments".</li>
+              <li>Ensure the design is attractive, memorable, and encourages clicks.</li>
+              <li>Style should be modern, fresh, and autumn-inspired.</li>
+              <li>Align with ZORA's visual identity (Brand Guidelines).</li>
+              <li>Use corporate colors flexibly, not mandatory.</li>
+            </ul>
+          `
+        }
+      };
+
+      function openBrief(event, projectId) {
+        event.stopPropagation();
+        const briefModal = document.getElementById('brief-modal');
+        const briefContent = document.getElementById('brief-content');
+        
+        if (briefData[projectId]) {
+          briefContent.innerHTML = briefData[projectId].html;
+          briefModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeBrief(event) {
+        if (event && event.target.id !== 'brief-modal') return;
+        const briefModal = document.getElementById('brief-modal');
+        briefModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Close brief on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeBrief();
+        }
+      });
+
+      // Initialize gallery on page load
+      window.addEventListener('load', () => {
+        initGallery();
+      });
+    </script>
+    <!-- Page Load Animation Script -->
+      <script>
+    window.addEventListener('load', () => {
+      const content = document.getElementById('page-content');
+      content.classList.add('visible');
+    });
+  </script>
+  </body>
+</html>
